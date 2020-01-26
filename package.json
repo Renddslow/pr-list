@@ -2,7 +2,7 @@
   "name": "pr-list",
   "version": "0.1.0",
   "private": false,
-  "description": "An interface for querying a list of PR's.",
+  "description": "An interface for querying a list of PR's from Bitbucket.",
   "repository": "https://github.com/Renddslow/pr-list",
   "license": "MIT",
   "author": "Matt McElwee <mubatt@wyopub.com>",
@@ -24,5 +24,11 @@
     "husky": "^4.2.1",
     "lint-staged": "^10.0.2",
     "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "catchify": "^2.6.1",
+    "dot-prop": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "got": "^10.3.0"
   }
 }
