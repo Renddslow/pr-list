@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "catchify": "^2.6.1",
-    "dot-prop": "^5.2.0",
     "dotenv": "^8.2.0",
     "got": "^10.3.0"
   }
