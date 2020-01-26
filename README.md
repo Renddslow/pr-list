@@ -20,6 +20,8 @@ const getPRList = require('pr-list');
 })();
 ```
 
+**A note:** This package was built with reporting in mind, and is not intended to be used in user-facing applications. The Bitbucket API is quite good with a very helpful interface, so I would recommend using that instead of this if you want to fetch information on the fly in you application.
+
 ## API
 
 ### prList(options)
