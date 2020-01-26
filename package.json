@@ -29,5 +29,14 @@
     "catchify": "^2.6.1",
     "dotenv": "^8.2.0",
     "got": "^10.3.0"
-  }
+  },
+  "keywords": [
+    "bitbucket",
+    "pullrequests",
+    "reporting",
+    "diff-stat",
+    "repositories",
+    "repos",
+    "prs"
+  ]
 }
