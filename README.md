@@ -31,6 +31,7 @@ Returns a `Promise` for an object with all the matching repos, PRs, and a method
 - `repos`: An array of [Bitbucket repository objects](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Bworkspace%7D#reponses)
 - `prs`: An array of [Bitbucket PR objects](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Bworkspace%7D/%7Brepo_slug%7D/pullrequests)
 - `getDiffStats`: A method that returns a `Promise` for an array of Bitbucket diff-stat objects.
+- `getApprovers`: A method that returns a `Promise` for an array of Bitbucket pullrequest participants.
 
 #### options
 

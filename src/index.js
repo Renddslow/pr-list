@@ -1,4 +1,6 @@
 require('dotenv').config();
+const got = require('got');
+const catchify = require('catchify');
 
 const pagedFetch = require('./pagedFetch');
 
@@ -46,11 +48,28 @@ const getPRs = async (options = {}) => {
       (acc, val) => [...acc, ...val],
       [],
     );
+  const getApprovers = async () =>
+    await Promise.all(
+      prs.map(async (pr) => {
+        const [err, data] = await catchify(
+          got(pr.links.self.href, {
+            headers: {
+              authorization: `Basic ${authorization}`,
+            },
+          }).json(),
+        );
+
+        if (err) return [];
+
+        return data.participants.filter((p) => p.approved);
+      }),
+    );
 
   return {
     repos,
     prs,
     getDiffStats,
+    getApprovers,
   };
 };
 
