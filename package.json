@@ -1,6 +1,6 @@
 {
   "name": "pr-list",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": false,
   "description": "An interface for querying a list of PR's from Bitbucket.",
   "repository": "https://github.com/Renddslow/pr-list",
