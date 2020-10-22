@@ -43,14 +43,14 @@ const getPRs = async (options = {}) => {
     )
   ).reduce((acc, val) => [...acc, ...val], []);
 
-  const getDiffStats = async () =>
-    (await Promise.all(prs.map((p) => pagedFetch(p.links.diffstat.href, authorization)))).reduce(
+  const getDiffStats = async (ignore = () => true) =>
+    (await Promise.all(prs.filter(ignore).map((p) => pagedFetch(p.links.diffstat.href, authorization)))).reduce(
       (acc, val) => [...acc, ...val],
       [],
     );
-  const getApprovers = async () =>
+  const getApprovers = async (ignore = () => true) =>
     await Promise.all(
-      prs.map(async (pr) => {
+      prs.filter(ignore).map(async (pr) => {
         const [err, data] = await catchify(
           got(pr.links.self.href, {
             headers: {
