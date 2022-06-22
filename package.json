@@ -28,7 +28,7 @@
   "dependencies": {
     "catchify": "^2.6.1",
     "dotenv": "^8.2.0",
-    "got": "^10.3.0"
+    "got": "^11.8.5"
   },
   "keywords": [
     "bitbucket",
